@@ -28,7 +28,6 @@
                 <ul class="nav navbar-nav">
                     <li><a href="<?= base_url(); ?>index.php/buku">Buku</a></li>
                     <li><a href="<?= base_url(); ?>index.php/pengarang">Pengarang</a></li>
-                    <li><a href="<?= base_url(); ?>index.php/krs">Pengisian KRS</a></li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div>
