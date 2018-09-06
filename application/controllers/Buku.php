@@ -12,13 +12,12 @@ class Buku extends CI_Controller {
 
 	public function index()
 	{
-			$data['bukus'] = $this->Buku_model->all();
 			$query = "
 				SELECT buku.id, buku.nama, pengarang.nama as nama_pengarang
 				FROM buku
 				INNER JOIN pengarang ON buku.pengarang_id = pengarang.id;
 			";
-			$data['raw'] = $this->db->query($query)->result();
+			$data['bukus'] = $this->db->query($query)->result();
 			// var_dump($data['raw']);
 			$this->template->build('buku/index', $data);
 	}

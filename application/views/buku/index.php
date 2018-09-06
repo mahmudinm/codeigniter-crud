@@ -7,7 +7,7 @@
 		<th>Option</th>
 	</thead>
 	<tbody>
-		<?php foreach ($raw as $buku): ?>
+		<?php foreach ($bukus as $buku): ?>
 			<tr>
 				<td><?= $buku->id ?></td>
 				<td><?= $buku->nama ?></td>
