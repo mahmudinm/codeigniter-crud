@@ -4,7 +4,7 @@
 
     <div class="form-group <?php echo (form_error('gambar') ? 'has-error' : '') ?>">
         <label for="gambar">Gambar</label>
-        <input type="text" class="form-control" id="gambar" name="gambar" placeholder="Isikan Gambar" value="<?= set_value('gambar'); ?>">
+        <input type="file" class="form-control" id="gambar" name="gambar" placeholder="Isikan Gambar" value="<?= set_value('gambar'); ?>">
         <small class="block text-danger"><?= form_error('gambar'); ?></small>
     </div>    
 
