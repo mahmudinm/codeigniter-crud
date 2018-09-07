@@ -29,6 +29,20 @@
                     <li><a href="<?= base_url(); ?>index.php/buku">Buku</a></li>
                     <li><a href="<?= base_url(); ?>index.php/pengarang">Pengarang</a></li>
                 </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <?php if ($this->session->userdata('username')): ?>
+                        <li class="dropdown">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">User<span class="caret"></span></a>
+                          <ul class="dropdown-menu">
+                            <li><a href="<?= base_url() ?>/index.php/auth/logout">Logout</a></li>
+                          </ul>
+                        </li>                        
+                    <?php else: ?>
+                        <li><a href="<?= base_url() ?>/index.php/auth">Login</a></li>
+                        <li><a href="<?= base_url() ?>/index.php/auth/register">Register</a></li>
+                    <?php endif ?>
+
+                </ul>
             </div><!-- /.navbar-collapse -->
         </div>
     </nav>

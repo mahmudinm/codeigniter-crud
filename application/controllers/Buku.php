@@ -8,6 +8,9 @@ class Buku extends CI_Controller {
   {
       parent::__construct();
       $this->load->model(['Buku_model', 'Pengarang_model']);
+      if ( !$this->session->userdata('username') ) {
+      	return redirect('auth');
+      }
   }
 
 	public function index()
